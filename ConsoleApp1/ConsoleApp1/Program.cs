@@ -13,7 +13,40 @@ namespace ConsoleApp1
 
             //ReizTabula();
             //Zvaigznite();
-            Saskaititajs();
+            //Saskaititajs();
+            int izvele = 1;
+            while (izvele != 0)
+            {
+
+                Console.WriteLine("1-izvadit reizrekina tabulu");//izvade
+                Console.WriteLine("2-izvadit zvaigznites");
+                Console.WriteLine("3-Saskaititajs");
+                Console.WriteLine("0-Iziet");//izvade
+
+                string input = Console.ReadLine();
+                izvele = Convert.ToInt16(input);
+
+                switch (izvele)
+                {
+                    case 1:
+                        ReizTabula();
+                        break;
+                    case 2:
+                        Zvaigznite();
+                        break;
+                    case 3:
+                        Saskaititajs();
+                        break;
+                    case 0:
+                        izvele = 0;
+                        break;
+                    default:
+                        Console.WriteLine("Ievade nav pareiza");
+                        break;
+                }
+
+
+            }
             Console.ReadLine();
         }
 
